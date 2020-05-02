@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Online Bus</title>
+
+    <!-- Favicon -->
+<!--    <link rel="icon" href="img/core-img/favicon.png">-->
+    <link rel="icon" href="{{ url_for('static', filename='img/core-img/favicon.png') }}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+    <!-- Preloader -->
+<!--    <div id="preloader">-->
+<!--        <div class="loader"></div>-->
+<!--    </div>-->
+    <!-- /Preloader -->
+
+    <!-- Header Area Start -->
+    {% include 'includes/_navbar.html' %}
+    <!-- Header Area End -->
+
+    {% block body %} {% endblock %}
+
+    <!-- Call To Action Area Start -->
+    {% include 'includes/_home_call_to_action.html' %}
+    <!-- Call To Action Area End -->
+
+    <!-- Partner Area Start -->
+    {% include 'includes/_home_partner.html' %}
+    <!-- Partner Area End -->
+
+    {% include 'includes/_footer.html' %}
+
+
+
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <!-- Popper -->
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- All Plugins -->
+    <script src="{{ url_for('static', filename='js/roberto.bundle.js') }}"></script>
+    <!-- Active -->
+    <script src="{{ url_for('static', filename='js/default-assets/active.js') }}"></script>
+
+</body>
+</html>
